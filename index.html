@@ -3,18 +3,51 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mapa geograficzna – półwyspy, wyspy, góry, niziny, wyżyny, pustynie</title>
+<title>Mapa geograficzna – nauka i gra</title>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <aside id="sidebar">
   <h1>Mapa geograficzna</h1>
-  <input id="search" type="search" placeholder="Szukaj nazwy…">
-  <div id="lists"></div>
+  <nav id="tabs">
+    <button data-mode="learn" class="active">📖 Nauka</button>
+    <button data-mode="game">🎮 Gra</button>
+  </nav>
+
+  <section id="learn">
+    <input id="search" type="search" placeholder="Szukaj nazwy…">
+    <div id="lists"></div>
+  </section>
+
+  <section id="game" hidden>
+    <div id="g-start">
+      <p>Wylosuję do 20 nazw. Dla każdej kliknij na mapie miejsce, w którym leży dany obiekt.</p>
+      <div id="g-cats"></div>
+      <label><input type="checkbox" id="g-nolabels" checked> Ukryj podpisy na mapie (trudniej)</label>
+      <button id="g-begin" class="primary">Start</button>
+    </div>
+
+    <div id="g-play" hidden>
+      <div id="g-stats"></div>
+      <div id="g-question"></div>
+      <div id="g-feedback"></div>
+      <button id="g-next" class="primary" hidden>Dalej</button>
+      <button id="g-quit">Zakończ</button>
+    </div>
+
+    <div id="g-end" hidden>
+      <h2 id="g-score"></h2>
+      <div id="g-missed-title"></div>
+      <ul id="g-missed"></ul>
+      <button id="g-redo" class="primary" hidden>Powtórz błędne</button>
+      <button id="g-again">Nowa gra</button>
+    </div>
+  </section>
 </aside>
 <div id="map"></div>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="script.js"></script>
+<script src="game.js"></script>
 </body>
 </html>

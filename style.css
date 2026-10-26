@@ -18,3 +18,24 @@ summary label{margin-left:auto;font-weight:400;font-size:12px}
   #map{order:-1}
   #sidebar{border-right:0;border-top:1px solid #ccc}
 }
+
+/* --- menu i gra --- */
+[hidden]{display:none!important}
+#tabs{display:flex;gap:6px;margin-bottom:10px}
+#tabs button{flex:1;padding:8px;border:1px solid #bbb;background:#fff;border-radius:6px;cursor:pointer;font-size:14px}
+#tabs button.active{background:#2563eb;border-color:#2563eb;color:#fff}
+.dot{width:14px;height:14px;border-radius:3px;flex:none;display:inline-block}
+#game p{margin:0 0 8px;font-size:14px}
+#game label{font-size:14px;display:flex;align-items:center;gap:6px}
+#g-cats{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin:8px 0}
+#game button{padding:8px 14px;border:1px solid #bbb;background:#fff;border-radius:6px;cursor:pointer;font-size:14px;margin-top:8px}
+#game button.primary{background:#2563eb;border-color:#2563eb;color:#fff}
+#g-stats{font-size:13px;color:#555}
+#g-question{font-size:20px;margin:10px 0}
+.tag{color:#fff;font-size:12px;padding:2px 8px;border-radius:10px;vertical-align:middle}
+#g-feedback{min-height:24px;font-weight:600}
+#g-feedback.ok{color:#16a34a}
+#g-feedback.bad{color:#dc2626}
+#g-score{margin:6px 0}
+#g-missed{padding-left:20px;font-size:14px}
+#map.playing .leaflet-grab{cursor:crosshair}
