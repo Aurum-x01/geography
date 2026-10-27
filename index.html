@@ -12,7 +12,8 @@
   <h1>Mapa geograficzna</h1>
   <nav id="tabs">
     <button data-mode="learn" class="active">📖 Nauka</button>
-    <button data-mode="game">🎮 Gra</button>
+    <button data-mode="locate">📍 Wskaż</button>
+    <button data-mode="name">✍️ Nazwa</button>
   </nav>
 
   <section id="learn">
@@ -22,15 +23,30 @@
 
   <section id="game" hidden>
     <div id="g-start">
-      <p>Wylosuję do 20 nazw. Dla każdej kliknij na mapie miejsce, w którym leży dany obiekt.</p>
+      <p id="g-intro"></p>
       <div id="g-cats"></div>
+      <label class="row">Liczba pytań:
+        <select id="g-count">
+          <option value="auto">Auto (20; wszystkie przy jednej kategorii)</option>
+          <option value="10">10</option>
+          <option value="20">20</option>
+          <option value="30">30</option>
+          <option value="all">Wszystkie z wybranych</option>
+        </select>
+      </label>
       <label><input type="checkbox" id="g-nolabels" checked> Ukryj podpisy na mapie (trudniej)</label>
+      <label id="g-hintswrap" hidden><input type="checkbox" id="g-hints"> Podpowiedzi z listy nazw</label>
       <button id="g-begin" class="primary">Start</button>
     </div>
 
     <div id="g-play" hidden>
       <div id="g-stats"></div>
       <div id="g-question"></div>
+      <div id="g-answerbox" hidden>
+        <input id="g-answer" type="text" autocomplete="off" placeholder="Wpisz nazwę…">
+        <button id="g-check" class="primary">Sprawdź</button>
+        <button id="g-giveup">Nie wiem</button>
+      </div>
       <div id="g-feedback"></div>
       <button id="g-next" class="primary" hidden>Dalej</button>
       <button id="g-quit">Zakończ</button>
@@ -43,6 +59,7 @@
       <button id="g-redo" class="primary" hidden>Powtórz błędne</button>
       <button id="g-again">Nowa gra</button>
     </div>
+    <datalist id="g-names"></datalist>
   </section>
 </aside>
 <div id="map"></div>

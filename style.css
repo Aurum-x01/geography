@@ -39,3 +39,12 @@ summary label{margin-left:auto;font-weight:400;font-size:12px}
 #g-score{margin:6px 0}
 #g-missed{padding-left:20px;font-size:14px}
 #map.playing .leaflet-grab{cursor:crosshair}
+
+/* --- tryb "Nazwa" i opcje --- */
+#tabs button{font-size:13px;padding:8px 4px}
+#game label.row{flex-direction:column;align-items:stretch;margin:8px 0;gap:4px}
+#game select{padding:6px;border:1px solid #bbb;border-radius:6px;font-size:13px}
+#game label{margin-top:6px}
+#g-answerbox{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0}
+#g-answer{flex:1 1 100%;padding:8px;border:1px solid #bbb;border-radius:6px;font-size:15px}
+#g-answerbox button{margin-top:0}
